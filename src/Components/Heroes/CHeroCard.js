@@ -15,7 +15,7 @@ const CHeroCard = ( { id,superhero,alter_ego,first_appearance,characters } ) =>
 
                 <div className="col-md-4">
 
-                    <img src={ `./assets/heroes-img/${ id }.jpg` } className="card-img" alt={ superhero }/>
+                    <img src={ `../assets/heroes-img/${ id }.jpg` } className="card-img" alt={ superhero }/>
 
                 </div>
 
