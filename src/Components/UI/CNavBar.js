@@ -10,9 +10,7 @@ export const CNavbar = () =>
     
     const { user:{ name }, dispatch } = useContext( AuthContext );
 
-    const history = useHistory(); // router cuenta con un provider que entrega la informacion global de las rutas
- 
-    /////
+    const history = useHistory(); 
 
     const handleLogout = () =>
     {
@@ -21,7 +19,7 @@ export const CNavbar = () =>
         history.replace( "/login" );
     };
 
-    /////
+/*************************************************************************************** */
 
     return (
 

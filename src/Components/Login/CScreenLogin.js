@@ -3,11 +3,10 @@ import { AuthContext } from '../../Auth/AuthContext';
 import { types } from '../../Types/types';
 ////
 
-const CScreenLogin = ( { history } ) =>  // history -> prop de react-router-dom
+const CScreenLogin = ( { history } ) =>
 {
-    const { dispatch } = useContext( AuthContext );
 
-    ////
+    const { dispatch } = useContext( AuthContext );
 
     const handleLogin = () =>
     {
@@ -16,14 +15,13 @@ const CScreenLogin = ( { history } ) =>  // history -> prop de react-router-dom
 
         dispatch( action );
 
-        /////
-
         const lastPath = localStorage.getItem( "lastPath" ) || "/";
 
-        history.replace( lastPath ); //reemplaza la direccion dentro de la historia evitando que se pueda volver a la pagina inicial
+        history.replace( lastPath ); 
+
     };
 
-    /////
+/********************************************************************************************************* */
 
     return (
 

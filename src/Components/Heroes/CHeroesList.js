@@ -6,9 +6,10 @@ import CHeroCard from './CHeroCard';
 
 const CHeroesList = ( { publisher } ) => 
 { 
-    const heroes = useMemo( () => SGetHerosByPublisher( publisher ), [ publisher ] );// la funcion vuelve a dispararse si es que el publisher cambia
 
-    /////
+    const heroes = useMemo( () => SGetHerosByPublisher( publisher ), [ publisher ] );
+
+/************************************************************************************************ */
 
     return (
 

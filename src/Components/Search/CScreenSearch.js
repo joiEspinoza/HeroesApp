@@ -12,8 +12,6 @@ const CScreenSearch = ( { history } ) =>
 
     const location = useLocation(); // hook de react router dom
     
-    /////
-
     const { q = "" } = queryString.parse( location.search ); // extraccion y parceo de q | addon query-string
     // se inicializa en "" en caso de que este vacio, si no se inicializa arroja undefine
 
@@ -35,7 +33,7 @@ const CScreenSearch = ( { history } ) =>
 
     const herosFilter = useMemo( () => SGetHeroByNameQ( q ), [ q ] );
 
-    ////
+/*********************************************************************************************************** */
 
     return (
 
@@ -67,7 +65,7 @@ const CScreenSearch = ( { history } ) =>
 
                     { q !== "" && herosFilter.length === 0 && <div className="alert alert-dark">There is no a Hero <b>{ q }</b></div> }
 
-                    { herosFilter.map( ( ObjetoH )=> <CHeroCard key={ ObjetoH.id } {...ObjetoH} /> )    }
+                    { herosFilter.map( ( ObjetoH )=> <CHeroCard key={ ObjetoH.id } { ...ObjetoH } /> )    }
 
                 </div>
                 

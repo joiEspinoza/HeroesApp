@@ -7,10 +7,8 @@ import SGetHeroById from '../../Selectors/SGetHeroById';
 const CScreenHero = ( { history } ) => 
 {
 
-    const { heroeId } = useParams(); // hook de router-dom | extrae parametros de url en forma de objeto
+    const { heroeId } = useParams(); 
     
-    /////
-
     const hero = useMemo( () => SGetHeroById( heroeId ), [ heroeId ] );
 
     /////
@@ -39,7 +37,7 @@ const CScreenHero = ( { history } ) =>
 
     };
 
-    /////
+/************************************************************************************************ */
 
     return (
 
@@ -47,7 +45,7 @@ const CScreenHero = ( { history } ) =>
 
            <div className="col-4">
 
-                <img src={ `../img/${ id }.jpg` } className="img-thumbnail animate__animated animate__fadeInLeft" alt={ superhero }/>
+                <img src={ `../img/${ id }.JPG` } className="img-thumbnail animate__animated animate__fadeInLeft" alt={ superhero }/>
 
            </div>
 

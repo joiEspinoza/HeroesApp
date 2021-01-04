@@ -3,22 +3,19 @@ import { AuthContext } from '../Auth/AuthContext';
 import authReducer from '../Auth/authReducer';
 import AppRouter from '../Components/Routers/AppRouter';
 import "./HeroesApp.css";
-//``
 
-/////
+/////``
 
 const init = () =>
 {
     return JSON.parse( localStorage.getItem( "user" ) ) || { logged : false };
 };
 
-/////
 
 const HeroesApp = () => 
 {
-    const [ user, dispatch ] = useReducer( authReducer, {}, init );
 
-    ////
+    const [ user, dispatch ] = useReducer( authReducer, {}, init );
 
     useEffect( () => 
     {
@@ -29,7 +26,7 @@ const HeroesApp = () =>
     }, [ user ]);
 
 
-    ////
+/*************************************************************************************************** */
 
     return (
 
